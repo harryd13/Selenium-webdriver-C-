@@ -1,0 +1,25 @@
+For this script to run:
+open VS Code in dummytest1 folder
+install extension: Nuget Package Manager ,  we will install selenium dependencies using this ext.
+Download .Net core SDK, check with $ dotnet -version
+download c# language extension in VS Code
+create a new N unit project using :$ dotnet new nunit , this makes a .cs file , copy the .cs file in this folder in that file.
+click on yes if VS Code ask for any missing dependencies download
+build this using : $ dotnet build  
+download chromeDriver from https://chromedriver.chromium.org/downloads and place the ext file in project folder/bin/debug/netcoreapp
+install VS code test Explorer, it helps in listing all the tests and will help in running them,
+after installing the above
+    goto VS Code settings
+    search for "testprojectpath"
+    write the name of your .csproj file and save
+Now download am\nd install selenium driver :
+    goto view
+    command palette
+    type Nuget package manager: Add Package
+    type selenium
+    select selenium.WebDriver
+    select latest alpha release
+you'll get a success message
+ 
+good to go!.
+
