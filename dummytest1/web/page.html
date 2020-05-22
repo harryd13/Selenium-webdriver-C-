@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document1</title>
+  </head>
+  <body>
+    <label>Enter Age:</label>
+    <input type="text" id="txtAge" />
+    <br />
+    <span id="validations" style="color: red;"></span>
+    <script>
+      var min = 5;
+      var max = 45;
+      var txtAge = document.querySelector("#txtAge");
+      var validationPlaceholder = document.querySelector("#validations");
+      txtAge.addEventListener("blur", function () {
+        var val = parseFloat(this.value);
+        validationPlaceholder.innerHTML = "";
+        if (val < min || val > max) {
+          validationPlaceholder.innerHTML =
+            "wrong range man its in btw 5 to 45";
+        }
+      });
+    </script>
+  </body>
+</html>
